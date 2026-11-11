@@ -1,0 +1,14 @@
+# Runtime dependencies (pinned). Versions were chosen from known-compatible releases but could NOT be
+# installed or verified in the authoring sandbox (no network). After the first successful install, run
+# `pip freeze > requirements.lock` and commit the lock file.
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+SQLAlchemy==2.0.36
+alembic==1.14.0
+psycopg[binary]==3.2.3
+pydantic==2.10.3
+pydantic-settings==2.7.0
+PyJWT==2.10.1
+argon2-cffi==23.1.0
+email-validator==2.2.0
+redis==5.2.1

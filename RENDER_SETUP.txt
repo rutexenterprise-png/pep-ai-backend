@@ -1,0 +1,18 @@
+PEP AI backend - Render setup
+
+Build command:
+pip install -r requirements.txt
+
+Start command:
+uvicorn app.main:app --host 0.0.0.0 --port $PORT
+
+For the first deployment/testing phase, use:
+ENVIRONMENT=development
+DATABASE_URL=<your Render Postgres connection string>
+JWT_SECRET=<random secret, at least 32 characters>
+CORS_ORIGINS=https://pepai.vercel.app
+APP_BASE_URL=https://pepai.vercel.app
+
+After the API is working, switch to a hardened production configuration
+with ENVIRONMENT=production, PostgreSQL, HTTPS origins, email provider,
+and Alembic migrations.
